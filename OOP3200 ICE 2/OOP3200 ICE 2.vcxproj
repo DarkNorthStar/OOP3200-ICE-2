@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CartesianPoint.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyConsoleInput.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CartesianPoint.h" />
     <ClInclude Include="MyconsoleInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
