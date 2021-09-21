@@ -22,6 +22,7 @@ int main()
 	CartesianPoint origin = CartesianPoint(0, 0);
 	// a point called 'destination'
 	CartesianPoint destination = CartesianPoint(0, 0);
+	
 
 
 	int inputX; // temporary input variable for x
