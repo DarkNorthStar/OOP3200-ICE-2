@@ -34,6 +34,14 @@ bool CartesianPoint::operator==(const CartesianPoint& point_to) const
 {
 	return(((*this).GetX() == point_to.GetX()) && ((*this).GetY() == point_to.GetY()));
 }
+// Copys one point to another
+CartesianPoint CartesianPoint::operator=(const CartesianPoint& new_point)
+{
+	SetX(new_point.GetX());
+	SetY(new_point.GetY());
+	return *this;
+}
+
 // Adds two points together and returns new point
 CartesianPoint CartesianPoint::operator+(const CartesianPoint& point_to) const
 {

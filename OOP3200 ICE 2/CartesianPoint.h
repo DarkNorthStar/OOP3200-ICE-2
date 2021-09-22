@@ -22,6 +22,10 @@ public:
 
 	CartesianPoint operator+(const CartesianPoint& point_to) const;
 
+	// Copy Constructor
+	CartesianPoint operator=(const CartesianPoint& new_point);
+
+	
 	// FRIEND OVERLOADS
 	friend std::ostream& operator<<(std::ostream& out, const CartesianPoint& point);
 	friend std::istream& operator>>(std::istream& in,  CartesianPoint& point);

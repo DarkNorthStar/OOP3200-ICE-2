@@ -2,6 +2,7 @@
  *
  *	In this example program, did the following:
  *		- Examined a simple class with 'instance' data-members, a constructor, accessors, mutators.
+ *		- Now with overrides and overloads
  *
  *	@author		Tyler Osborne
  *	@studentID  100757532
