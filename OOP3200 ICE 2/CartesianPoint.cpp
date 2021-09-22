@@ -15,7 +15,15 @@ CartesianPoint::~CartesianPoint()
 = default;
 
 // OPERATION OVERLOADS
-
+double CartesianPoint::operator-(const CartesianPoint& point_to) const
+{
+	//	difference between x values
+	const int xDelta = point_to.myX - myX;
+	//	difference between y values
+	const int yDelta = point_to.myY - myY;
+	//	return the formula (based on Pythagorean theorem)
+	return sqrt((xDelta * xDelta) + (yDelta * yDelta));
+}
 
 
 //-----------------------------------------------------------------------

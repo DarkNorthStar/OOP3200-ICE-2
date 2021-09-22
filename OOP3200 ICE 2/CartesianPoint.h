@@ -14,7 +14,8 @@ public:
 	~CartesianPoint();
 
 	// OPERATION OVERLOADS
-	// Videos left off here at 37:21
+	double operator-(const CartesianPoint& point_to) const;
+	
 
 	//-----------------------------------------------------------------------
 	// ACCESSORS: Used to query the state of the object

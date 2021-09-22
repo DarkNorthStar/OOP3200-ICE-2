@@ -24,7 +24,6 @@ int main()
 	CartesianPoint destination = CartesianPoint(0, 0);
 	
 
-
 	int inputX; // temporary input variable for x
 	int inputY; // temporary input variable for y
 	// to store the distance between two points
@@ -33,7 +32,6 @@ int main()
 	try
 	{
 		// Input
-
 		// Prompt the user for the coordinates
 		std::cout << "\nEnter coordinates of the destination point: " << std::endl;
 		// prompt for, read, and store x coordinate:
@@ -41,16 +39,15 @@ int main()
 		inputX = ConsoleInput::ReadInteger();
 		destination.SetX(inputX);
 
-
 		// prompt for, read, and store y coordinate:
 		std::cout << "Y: ";
 		inputY = ConsoleInput::ReadInteger();
 		destination.SetY(inputY);
 
-
 		// Processing
 		// determine the distance between the two points
-		distance = origin.GetDistanceTo(destination);
+		//distance = origin.GetDistanceTo(destination);
+		distance = origin - destination; // Replaces getDistanceTo() overload
 
 		// Output 
 		// Show the points and the distance
@@ -58,7 +55,6 @@ int main()
 		std::cout << "\nThe distance between " << origin.ToString()
 			<< " and " << destination.ToString() << " is "
 			<< distance << ", " << std::endl;
-
 	}
 
 	catch (std::exception& ex)
