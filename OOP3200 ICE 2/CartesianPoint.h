@@ -13,8 +13,18 @@ public:
 	// Destructor
 	~CartesianPoint();
 
+	// Copy Constructor
+	CartesianPoint(const CartesianPoint& point_to);
+
 	// OPERATION OVERLOADS
 	double operator-(const CartesianPoint& point_to) const;
+	bool operator==(const CartesianPoint& point_to) const;
+
+	CartesianPoint operator+(const CartesianPoint& point_to) const;
+
+	// FRIEND OVERLOADS
+	friend std::ostream& operator<<(std::ostream& out, const CartesianPoint& point);
+	friend std::istream& operator>>(std::istream& in,  CartesianPoint& point);
 	
 
 	//-----------------------------------------------------------------------
@@ -45,8 +55,8 @@ public:
 
 private:
 	// private data members for the dimensions of the point
-	int myX; // x-axis (horizontal) value
-	int myY;  // y-axis (vertical) value
+	int m_x; // x-axis (horizontal) value
+	int m_y;  // y-axis (vertical) value
 
 };
 

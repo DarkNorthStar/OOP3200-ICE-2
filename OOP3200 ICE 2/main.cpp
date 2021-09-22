@@ -19,9 +19,9 @@ int main()
 {
 	// Declarations
 	// a point called 'origin', initialized to 0, 0
-	CartesianPoint origin = CartesianPoint(0, 0);
+	CartesianPoint origin = CartesianPoint(10, 20);
 	// a point called 'destination'
-	CartesianPoint destination = CartesianPoint(0, 0);
+	CartesianPoint destination;
 	
 
 	int inputX; // temporary input variable for x
@@ -49,12 +49,26 @@ int main()
 		//distance = origin.GetDistanceTo(destination);
 		distance = origin - destination; // Replaces getDistanceTo() overload
 
+		// if origin is equal to destination
+		std::cout << "origin is equal to destination?: " << std::to_string(origin == destination) << std::endl;
+
+		CartesianPoint newPoint = origin + destination;
+		std::cout << "Origin + Destination = " << newPoint << std::endl;
+
+
+		
+
 		// Output 
 		// Show the points and the distance
 		std::cout << std::fixed << std::setprecision(3); // formatting
-		std::cout << "\nThe distance between " << origin.ToString()
-			<< " and " << destination.ToString() << " is "
+		std::cout << "\nThe distance between " << origin
+			<< " and " << destination << " is "
 			<< distance << ", " << std::endl;
+
+		CartesianPoint anotherPoint;
+		std::cout << "\nEnter another point: " << std::endl;
+		std::cin >> anotherPoint;
+		std::cout << "You Entered: " << anotherPoint << std::endl;
 	}
 
 	catch (std::exception& ex)
